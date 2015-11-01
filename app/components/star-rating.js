@@ -8,6 +8,7 @@ export default Ember.Component.extend({
   maxRating: 5,
   item: null,
   setAction: '',
+  'on-click': '',
 
   stars: Ember.computed('rating', 'maxRating', function() {
     var fullStars = this.starRange(1, this.get('rating'), 'full');
@@ -28,6 +29,13 @@ export default Ember.Component.extend({
   actions: {
     set: function(newRating) {
       this.sendAction('setAction', {
+        item: this.get('item'),
+        rating: newRating
+      });
+    },
+
+    set(newRating) {
+      this.get('on-click')({
         item: this.get('item'),
         rating: newRating
       });
