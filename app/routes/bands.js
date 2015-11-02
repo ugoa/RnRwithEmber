@@ -32,7 +32,7 @@ var one = Song.create({
 var ledZeppelin = Band.create({ name: 'Led Zeppelin', songs: [blackDog] });
 var pearlJam = Band.create({ name: 'Pearl Jam', songs: [yellowLedbetter] });
 var fooFighters = Band.create({ name: 'Foo Fighters', songs: [pretender] });
-var u2 = Band.create({ name: 'U2', songs: [one] });
+var u2 = Band.create({ name: 'U2', description: 'The greatest band of all time!', songs: [one] });
 
 var BandsCollection = Ember.Object.extend({
   content: [],
